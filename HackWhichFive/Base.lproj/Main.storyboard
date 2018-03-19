@@ -10,6 +10,31 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Detail View Controller-->
+        <scene sceneID="duC-SK-OvE">
+            <objects>
+                <viewController id="Dy2-DB-FfY" customClass="detailViewController" customModule="HackWhichFive" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="514-LE-PgB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kapoleiKalapawai" translatesAutoresizingMaskIntoConstraints="NO" id="Ft7-Yn-a63">
+                                <rect key="frame" x="40" y="78" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Uwp-gW-wUs"/>
+                    </view>
+                    <connections>
+                        <outlet property="ImageView" destination="Ft7-Yn-a63" id="oat-Vz-QXE"/>
+                        <outlet property="imageView" destination="Ft7-Yn-a63" id="FgC-2v-EJj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Oo-6J-jAq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="641" y="132"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -30,6 +55,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Dy2-DB-FfY" kind="show" identifier="MySegue" id="Hmb-ok-dhB"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -50,4 +78,7 @@
             <point key="canvasLocation" x="-78.75" y="132.04225352112675"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="kapoleiKalapawai" width="1300" height="830"/>
+    </resources>
 </document>
